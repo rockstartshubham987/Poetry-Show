@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry Show</title>
+    <style>
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("https://img.freepik.com/free-vector/blank-rectangle-frame-design_53876-115749.jpg");
+            
+            background-repeat: no-repeat, repeat;
+            background-size: 100%;
+        
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        .poetry {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Poetry Show</h1>
+        <div class="poetry" id="poetry">
+            Press the button to see a new poem!
+        </div>
+        <button onclick="showNewPoetry()">New Poetry</button>
+    </div>
+
+    <script>
+        const poems = [
+            "The sun sets low, the sky turns red,\nWhispers of twilight softly spread.",
+            "In the moonlit night, the stars are bright,\nA peaceful breeze, a calm delight.",
+            "Upon the hill, the winds do sigh,\nAnd clouds drift slowly through the sky.",
+            "Beneath the trees, in shadows deep,\nThe forest hums as creatures sleep.",
+            "A river flows, both strong and wide,\nIt carries dreams upon its tide.",
+            "The mountain peaks rise to the sky,\Their snowy caps bid clouds goodbye.",
+            "The autumn leaves drift gently down,\A golden blanket on the ground.",
+            "Beneath the waves, the sea does sing,\Of mysteries hidden in its swing.",
+            "The morning dew on grass does gleam,\Like sparkling gems in daylight's beam.",
+            "A whisper soft, the breeze does call,\Through meadows wide and trees so tall.",
+            "In twilight’s glow, the world stands still,\As stars awake on every hill.",
+             "The forest deep, both calm and grand,\Holds secrets whispered through the land.",
+            "A quiet brook, it winds and bends,\Through valleys wide, where journey ends.",
+            "The silver moon in skies above,\Watches over the world with love.",
+            "The flowers bloom in colors bright,\A testament to nature’s light.",
+        ];
+
+        function showNewPoetry() {
+            const randomIndex = Math.floor(Math.random() * poems.length);
+            document.getElementById("poetry").innerText = poems[randomIndex];
+        }
+    </script>
+</body>
+</html>
